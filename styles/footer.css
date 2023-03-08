@@ -6,6 +6,11 @@
     color: var(--branco);
     padding: 1em 0;
 }
+.rodape__empresa{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 .rodape__titulo {
     font-weight: 700;
     font-size: 18px;
@@ -37,18 +42,9 @@
 }
 
 @media screen and (max-width: 798px) {
-    .rodape {
-        display: block;
-        padding: 1em;
-    }
-
-    .redes-sociais__lista {
-        display: block;
-    }
-
     .rodape{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         font-size: 10px;
     }
     .rodape__lista{
