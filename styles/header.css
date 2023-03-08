@@ -1,0 +1,116 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2em 1em;
+}
+
+.cabecalho-lista {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+    font-size: 18px;
+    margin: 0 2em;
+}
+
+.cabecalho__logo-inicio {
+    font-family: var(--fonte-logo);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--rosa);
+}
+
+.cabecalho__logo-final {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.cabecalho__pesquisa {
+    border: 2px solid #5B9177;
+    border-radius: 20px;
+    padding: .7em 1em;
+    width: 20vw;
+}
+
+.cabecalho__pesquisa::placeholder {
+    font-size: 18px;
+    background: url("../img/ícone\ busca.png") no-repeat right center;
+}
+
+.cabecalho-lista__item a {
+    text-decoration: none;
+}
+
+.cabecalho-lista__link {
+    color: var(--branco);
+}
+
+.cabecalho-lista__item-botao {
+    font-weight: 600;
+    border-radius: 20px;
+    padding: .5em 1em;
+    color: var(--rosa);
+    border: var(--rosa) 2px solid;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    transition: all .5s ease;
+
+}
+
+.cabecalho-lista__item-botao:hover{
+    background-color:#EDF3F0;
+    -webkit-box-shadow: 0px 0px 37px 0px rgba(227,75,137,1);
+    -moz-box-shadow: 0px 0px 37px 0px rgba(227,75,137,1);
+    box-shadow: 0px 0px 37px 0px rgba(227,75,137,1);
+}
+
+.cabecalho-lista__item-botao--roxo {
+    background-color: var(--rosa);
+    color: var(--branco);
+    transition: all .5s ease;
+}
+
+.cabecalho-lista__item-botao--roxo:hover{
+    color: var(--preto);
+    background-color: var(--branco);
+}
+
+@media screen and (max-width: 950px) {  
+    .cabecalho__pesquisa{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 798px) {
+
+    .cabecalho__logo-inicio{
+        font-size: 21px;
+    }
+
+    .cabecalho__pesquisa,
+    .cabecalho-lista__link {
+        display: none;
+    }
+
+    .cabecalho-lista__item-botao {
+        display: flex;
+        margin: 10px;
+        padding: .5em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .cabecalho{
+        display: flex;
+        flex-direction: column;
+    }
+    .cabecalho__logo-inicio{
+        font-size: 25px;
+    }
+     .cabecalho-lista{
+        margin-top: 10px;
+    } 
+    .cabecalho-lista__item-botao__acessar{
+        display: none;
+    }
+}

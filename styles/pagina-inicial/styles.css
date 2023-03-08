@@ -1,0 +1,206 @@
+.banner {
+    background-image: url("../../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center;
+}
+
+.conta__titulo,.banner__titulo{
+    font-weight: 600;
+    color: var(--branco);
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.banner__titulo {
+    width: 32%;
+    margin: 0 3em;
+    transform: translate(10%,10%);
+    background-image: linear-gradient(#5D003E, #5D003E);
+    background-size: 100% 10px;
+    background-repeat: no-repeat;
+    background-position: 100% 0%;
+    transition: background-size .7s, background-position .5s ease-in-out;
+}
+
+.banner__titulo:hover{
+    background-size: 100% 100%;
+    background-position: 0% 100%;
+    transition: background-position .7s, background-size .5s ease-in-out;
+}
+
+.servicos__titulo,
+.beneficios__titulo {
+    color: var(--branco);
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    margin: 1em 0;
+}
+
+.lista-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 4em 0;
+}
+.item-servicos{
+    backdrop-filter: blur(7px);
+    background-color: #E34B89;
+    border-radius: 26px;
+    box-shadow: 35px 35px 68px 0px rgba(144, 95, 165, 0.2), inset -8px -8px 16px 0px rgba(157, 177, 255, 0.6), inset 0px 11px 28px 0px rgb(255, 255, 255);
+    transition: all 0.3s;
+    cursor: pointer;
+    margin: 2em;
+}
+
+.item-servicos:hover{
+    box-shadow: 10px 10px 50px 0px #E34B89;
+}
+
+.item-servicos__titulo {
+    background-color: var(--branco);
+    color: var(--preto);
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    padding: .5em 0;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.item-servicos__imagem {
+    display: block;
+}
+
+.conta {
+    background-image: url("../../img/banner-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conta__container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.conta__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: center;
+    background: var(--rosa);
+    border-radius: 20px;
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 22px;
+    padding: 1em;
+    transition: ease-out 0.5s;
+}
+
+.conta__botao:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #5D003E;
+  }
+  
+  .conta__botao:active {
+    transform: scale(0.9);
+  }
+
+.beneficios-lista {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4em;
+    text-align: center;
+}
+
+.beneficios-lista__item {
+    width: 20%;
+}
+
+.beneficios__icone {
+    width: 80px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+}
+
+.icone-presente {
+    background-image: url('../../img/presente.svg');
+    color: var(--branco);
+}
+
+.icone-saque {
+    background-image: url('../../img/saque.svg');
+}
+
+.icone-estrela {
+    background-image: url('../../img/star.svg')
+}
+
+.beneficios-lista__titulo {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--rosa);
+    margin: .5em 0;
+}
+
+.beneficios-lista__paragrafo{
+    color: var(--branco);
+}
+
+@media screen and (max-width: 798px) {
+    .beneficios-lista {
+        display: block;
+        margin: 1em;
+    }
+
+    .beneficios-lista__item {
+        width: 100%;
+    }
+
+    .conta {
+        display: flex;
+
+    }
+    .item-servicos{
+        margin: .5em;
+    }
+
+    .beneficios-lista__item{
+        margin-top: 5em;
+    }
+    .beneficios-lista__paragrafo{
+        margin-bottom: 5em;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .banner__titulo{
+        font-size: 30px;
+        text-align: center;
+        background: none;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .item-servicos{
+        margin-left:  35px;
+        margin-right: 35px;
+    }
+}
